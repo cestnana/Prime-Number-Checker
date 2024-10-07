@@ -10,7 +10,6 @@
 # glue-1. 4 is the smallest composite
 # glue-2. a composite can be divided al least 3 numbers
 
-
 # TODO-2. prime number checker
 # 2-1. def is_prime func
 # 2-2. check the number is neither 1 nor composite
