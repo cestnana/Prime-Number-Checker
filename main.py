@@ -11,20 +11,18 @@ def is_composite(num):
   
   divided_count = 0
   num_square = math.sqrt(num)
-  # print(num_square)
   int_num_sqt = math.ceil(num_square)
+  
   for element in range(2, int_num_sqt, 1):
     is_divided = num % element
     if is_divided == 0:
       divided_count += 1
-  # print(f"divided count: {divided_count}, current element is: {element}, int num sqt: {int_num_sqt}.")
-  
+      
   if divided_count == 0:
     return False
   else:
     return True
   
-
 def is_prime(num):
   if is_composite(num) == False and num != 1:
     return True
