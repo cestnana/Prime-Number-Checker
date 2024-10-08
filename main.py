@@ -24,18 +24,25 @@ def is_composite(num):
     return True
   
 def is_prime(num):
-  if is_composite(num) == False and num != 1:
-    return True
+  if num > 0:
+    if is_composite(num) == False and num != 1:
+      return True
+    else:
+      return False
   else:
-    return False
+    print("Please input positive integer numbers.")
+    return "Error: not a positive number"
 
-print(is_prime(73))
-# except: True
-print(is_prime(75))
-# except: False
-print(is_prime(1))
-# except: False
-print(is_prime(2))
-# except: True
-print(is_prime(4))
-# except: False
+# print(is_prime(73))
+# # except: True
+# print(is_prime(75))
+# # except: False
+# print(is_prime(1))
+# # except: False
+# print(is_prime(2))
+# # except: True
+# print(is_prime(4))
+# # except: False
+
+print(is_prime(-1))
+# except: "please input positive integer numbers."
