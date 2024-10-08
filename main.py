@@ -13,7 +13,7 @@ def is_composite(num):
   num_square = math.sqrt(num)
   int_num_sqt = math.ceil(num_square)
   
-  for element in range(2, int_num_sqt, 1):
+  for element in range(2, int_num_sqt + 1, 1):
     is_divided = num % element
     if is_divided == 0:
       divided_count += 1
