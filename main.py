@@ -1,6 +1,17 @@
 # from itertools import count
 import math
 
+# def is_positive(num):
+#   if num > 0:
+#     return num
+#   else:
+#     print("Please input positive integer numbers.")
+#     return 
+#     # return "Error: not a positive number"
+
+def is_positive_integer(num):
+    return isinstance(num, int) and num > 0
+
 def is_composite(num):
   
   if num == 1 or num == 2:
@@ -24,14 +35,23 @@ def is_composite(num):
     return True
   
 def is_prime(num):
-  if num > 0:
+  # if num > 0:
+    
+  #   if is_composite(num) == False and num != 1:
+  #     return True
+  #   else:
+  #     return False
+  # else:
+  #   print("Please input positive integer numbers.")
+  #   return "Error: not a positive number"
+  if is_positive_integer(num): 
     if is_composite(num) == False and num != 1:
       return True
     else:
       return False
   else:
-    print("Please input positive integer numbers.")
-    return "Error: not a positive number"
+    print("Please input a positive integer number.")
+    return "Error: not a positive integer number"
 
 # print(is_prime(73))
 # # except: True
@@ -46,3 +66,6 @@ def is_prime(num):
 
 print(is_prime(-1))
 # except: "please input positive integer numbers."
+
+# test is_positive_integer(num)
+# print(is_positive_integer(-1))
